@@ -43,6 +43,10 @@
       text-transform: uppercase; }
   .about .about-carousel {
     overflow: hidden; }
+  .about .first-aboutCarousel {
+    width: 27%; }
+  .about .second-aboutCarousel {
+    width: 55%; }
   .about .bookmarks {
     margin-top: 150px;
     margin-right: 51px; }
@@ -62,17 +66,18 @@
         line-height: 160.86%; }
         .about .bookmarks ul li.active {
           color: #E3AE67;
-          position: relative; }
-          .about .bookmarks ul li.active:before {
-            content: '';
-            position: absolute;
-            width: 100%;
-            height: 1px;
-            background-color: #E3AE67;
-            left: -50px;
-            top: 50%;
-            -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%); }
+          position: relative;
+          /*  &:before {
+                        content: '';
+                        position: absolute;
+                        width: 100%;
+                        height: 1px;
+                        background-color: $primary_color;
+                        left: -50px;
+                        top: 50%;
+                        transform: translate(-50%, -50%);
+                    }
+*/ }
   .about .owlExample .item {
     margin-left: auto;
     padding: 20px;
@@ -2666,8 +2671,16 @@ textarea {
         font-family: "Open Sans", sans-serif;
         text-transform: uppercase;
         line-height: 160.86%; }
-      .footer footer .box-footer .d-flex .footer-social img {
-        margin-right: 10px; }
+      .footer footer .box-footer .d-flex .footer-social svg {
+        margin-right: 10px;
+        width: 20px;
+        height: 20.38px;
+        -webkit-transition: 0.2s;
+        transition: 0.2s; }
+      .footer footer .box-footer .d-flex .footer-social svg:hover path {
+        fill: #E3AE67;
+        -webkit-transition: 0.2s;
+        transition: 0.2s; }
 
 a {
   text-decoration: none; }
@@ -2780,6 +2793,19 @@ a {
             left: 0;
             z-index: 1;
         }*/ }
+  .header .fixed {
+    position: fixed !important;
+    left: 0;
+    top: -100%;
+    width: 100% !important;
+    z-index: 9999999999 !important;
+    background-color: #222222;
+    -webkit-box-shadow: 0 0.35714rem 1.07143rem rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0.35714rem 1.07143rem rgba(0, 0, 0, 0.5); }
+  .header .fly-nav {
+    top: 0%;
+    -webkit-transition: 0.4s;
+    transition: 0.4s; }
   .header .top-bar {
     position: absolute;
     width: 100%;
@@ -2823,7 +2849,10 @@ a {
         height: 20px;
         position: absolute;
         right: 20px;
-        z-index: 3; }
+        z-index: 3;
+        top: 50%;
+        -webkit-transform: translate(0%, -50%);
+        transform: translate(0%, -50%); }
         .header .top-bar .right .btn-nav span {
           height: 2px;
           width: 29px;
@@ -2853,6 +2882,10 @@ a {
             right: 0;
             -webkit-transition: 0.2s;
             transition: 0.2s; }
+        .header .top-bar .right .btn-nav:hover span:before, .header .top-bar .right .btn-nav:hover span:after {
+          width: 29px;
+          -webkit-transition: 0.2s;
+          transition: 0.2s; }
       .header .top-bar .right .btn_nav_active span {
         -webkit-transform: rotate(-45deg) translate(-9px, 6px);
         transform: rotate(-45deg) translate(-9px, 6px);
@@ -2904,6 +2937,15 @@ a {
     bottom: 25px;
     width: 100%;
     z-index: 3; }
+    .header .social-icons svg {
+      width: 20px;
+      height: 20.38px;
+      -webkit-transition: 0.2s;
+      transition: 0.2s; }
+      .header .social-icons svg:hover path {
+        fill: #E3AE67;
+        -webkit-transition: 0.2s;
+        transition: 0.2s; }
     .header .social-icons .max-width.d-flex {
       -webkit-box-pack: justify;
       -webkit-justify-content: space-between;
@@ -3065,8 +3107,8 @@ a {
       .lead-diary .leadDiaryCarousel .posts .text p {
         line-height: 120%; }
     .lead-diary .leadDiaryCarousel .posts img {
-      -webkit-filter: opacity(30%);
-      filter: opacity(30%);
+      -webkit-filter: grayscale(100%);
+      filter: grayscale(100%);
       -webkit-transition: 0.2s;
       transition: 0.2s; }
   .lead-diary .leadDiaryCarousel .owl-item {
@@ -3084,8 +3126,8 @@ a {
       -webkit-transition: 0.2s;
       transition: 0.2s; }
     .lead-diary .leadDiaryCarousel .owl-item.center img {
-      -webkit-filter: opacity(100%);
-      filter: opacity(100%);
+      -webkit-filter: grayscale(0%);
+      filter: grayscale(0%);
       -webkit-transition: 0.2s;
       transition: 0.2s; }
   .lead-diary .owl-nav {
@@ -3462,8 +3504,8 @@ a {
   .photo-video .slider-nav {
     margin-top: 25px; }
     .photo-video .slider-nav .slick-slide.slick-active img {
-      -webkit-filter: opacity(100%);
-      filter: opacity(100%);
+      -webkit-filter: grayscale(0%);
+      filter: grayscale(0%);
       -webkit-transition: 0.2s;
       transition: 0.2s; }
     .photo-video .slider-nav .slick-slide {
@@ -3475,8 +3517,8 @@ a {
         cursor: pointer;
         -o-object-fit: cover;
         object-fit: cover;
-        -webkit-filter: opacity(30%);
-        filter: opacity(30%);
+        -webkit-filter: grayscale(100%);
+        filter: grayscale(100%);
         -webkit-transition: 0.2s;
         transition: 0.2s; }
   .photo-video .title-links.d-flex {
@@ -3749,6 +3791,8 @@ a {
     text-transform: uppercase; }
   .reviews .reviews-carousel {
     overflow: hidden; }
+  .reviews .d-none {
+    display: none; }
   .reviews .bookmarks {
     margin-top: 150px;
     margin-right: 51px; }
@@ -3768,17 +3812,17 @@ a {
         line-height: 160.86%; }
         .reviews .bookmarks ul li.active {
           color: #E3AE67;
-          position: relative; }
-          .reviews .bookmarks ul li.active:before {
-            content: '';
-            position: absolute;
-            width: 100%;
-            height: 1px;
-            background-color: #E3AE67;
-            left: -50px;
-            top: 50%;
-            -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%); }
+          position: relative;
+          /* &:before {
+                        content: '';
+                        position: absolute;
+                        width: 100%;
+                        height: 1px;
+                        background-color: $primary_color;
+                        left: -50px;
+                        top: 50%;
+                        transform: translate(-50%, -50%);
+                    }*/ }
   .reviews .owlExample .item {
     margin-left: -15px;
     padding: 0px 20px;

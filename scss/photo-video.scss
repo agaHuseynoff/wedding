@@ -62,7 +62,7 @@ cursive;
 
         .slick-slide.slick-active {
             img {
-                filter: opacity(100%);
+                filter:  grayscale(0%);
                 transition: 0.2s;
             }
         }
@@ -76,7 +76,7 @@ cursive;
                 height: 500px;
                 cursor: pointer;
                 object-fit: cover;
-                filter: opacity(30%);
+                filter:  grayscale(100%);
                 transition: 0.2s;
             }
         }
@@ -120,8 +120,6 @@ cursive;
     }
 
     .title-section {
-
-
 
         .num {
             width: 80px;

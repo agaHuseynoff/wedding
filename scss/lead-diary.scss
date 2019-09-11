@@ -172,7 +172,7 @@ cursive;
             }
 
             img {
-                filter: opacity(30%);
+                filter:grayscale(100%) ;
                 transition: 0.2s;
             }
         }
@@ -197,7 +197,7 @@ cursive;
 
 
             img {
-                filter: opacity(100%);
+                filter:  grayscale(0%) ;
                 transition: 0.2s;
             }
 

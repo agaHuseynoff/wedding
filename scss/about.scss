@@ -66,6 +66,15 @@ cursive;
 
     .about-carousel {
         overflow: hidden;
+       
+    }
+    
+    .first-aboutCarousel {
+         width: 27%
+    }
+    
+    .second-aboutCarousel {
+        width: 55%;
     }
 
 
@@ -97,7 +106,7 @@ cursive;
                     color: $primary_color;
                     position: relative;
 
-                    &:before {
+                  /*  &:before {
                         content: '';
                         position: absolute;
                         width: 100%;
@@ -107,7 +116,7 @@ cursive;
                         top: 50%;
                         transform: translate(-50%, -50%);
                     }
-
+*/
 
                 }
             }

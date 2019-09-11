@@ -92,6 +92,14 @@ cursive;
     .reviews-carousel {
         overflow: hidden;
     }
+    
+    .d-none{
+        display: none;
+    }
+    
+    
+
+
 
 
     .bookmarks {
@@ -122,7 +130,7 @@ cursive;
                     color: $primary_color;
                     position: relative;
 
-                    &:before {
+                   /* &:before {
                         content: '';
                         position: absolute;
                         width: 100%;
@@ -131,7 +139,7 @@ cursive;
                         left: -50px;
                         top: 50%;
                         transform: translate(-50%, -50%);
-                    }
+                    }*/
 
 
                 }
