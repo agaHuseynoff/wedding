@@ -13,7 +13,7 @@ cursive;
     position: relative;
 
     .box-photo-video.max-width {
-        
+
         margin-top: 0px;
         max-width: 1400px;
     }
@@ -21,19 +21,32 @@ cursive;
     .title-section.d-flex {
         align-items: center;
     }
-    
+
     .photo_video {
         position: absolute;
         left: 5%;
-        
-        span{
+
+        span {
             margin-right: 25px;
             font-size: 15px;
             font-family: $font_open_sans;
             cursor: pointer;
-            
+
             &.active {
                 color: $primary_color;
+                position: relative;
+
+                &:before {
+                    content: '';
+                    position: absolute;
+                    width: 5000px;
+                    left: -5015px;
+                    height: 1px;
+                    background-color: $primary_color;
+                    top: 50%;
+                    transform: translate(0%, -50%);
+                }
+
             }
         }
     }
@@ -62,7 +75,7 @@ cursive;
 
         .slick-slide.slick-active {
             img {
-                filter:  grayscale(0%);
+                filter: grayscale(0%);
                 transition: 0.2s;
             }
         }
@@ -76,7 +89,7 @@ cursive;
                 height: 500px;
                 cursor: pointer;
                 object-fit: cover;
-                filter:  grayscale(100%);
+                filter: grayscale(100%);
                 transition: 0.2s;
             }
         }

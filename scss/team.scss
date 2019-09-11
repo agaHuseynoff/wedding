@@ -8,8 +8,8 @@ cursive;
 
 .team {
     position: relative;
-    
-    .owl-carousel{
+
+    .owl-carousel {
         width: 75%;
     }
 
@@ -74,7 +74,6 @@ cursive;
     }
 
     .team-carousel {
-        overflow: hidden;
         flex-direction: row-reverse;
         justify-content: space-between
     }
@@ -106,9 +105,23 @@ cursive;
                 line-height: 160.86%;
 
 
+
+
                 &.active {
                     color: $primary_color;
-                    
+                    position: relative;
+
+                    &:before {
+                        content: '';
+                        position: absolute;
+                        width: 5000px;
+                        right: -5015px;
+                        height: 1px;
+                        background-color: $primary_color;
+                        top: 50%;
+                        transform: translate(0%, -50%);
+                    }
+
 
                 }
             }

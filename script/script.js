@@ -3,7 +3,6 @@
  ****************************************/
 
 
-
 /********Menu**********/
 $('.btn-nav').on('click', function () {
     $(this).toggleClass('btn_nav_active');
@@ -88,6 +87,7 @@ $(function () {
             var owl;
             $(document).ready(function () {
 
+
                 owl = $('.aboutCarousel').owlCarousel({
                     items: 1,
                     center: true,
@@ -102,20 +102,50 @@ $(function () {
 
                 $('.owl-next').on('click', function () {
                     action = 'next';
+
                 });
 
                 $('.owl-prev').on('click', function () {
                     action = 'prev';
                 });
 
+                var indexActiveItem = owl.trigger('to.owl.carousel', [$(this).index(), 1000]);
+
+                var localMemory = $(indexActiveItem).find('.active').index();
+
                 $('.bookmarks-about').on('click', 'li', function (e) {
-                    owl.trigger('to.owl.carousel', [$(this).index(), 300]);
+                    owl.trigger('to.owl.carousel', [$(this).index(), 1000]);
+
+                    if (localMemory < $('.owl-carousel').find('.active').index()) {
+                        localMemory = $('.owl-carousel').find('.active').index();
+                        if ($('.owl-carousel').find('.active-anim-left') || $('.owl-carousel').find('.active-anim-right')) {
+                            $('.owl-carousel').find('.active-anim-left').removeClass('active-anim-left');
+                            $('.owl-carousel').find('.active-anim-right').removeClass('active-anim-right');
+
+
+                            $('.owl-carousel').find('.active').find('.text').addClass('active-anim-left');
+                            $('.owl-carousel').find('.active').find('.img').addClass('active-anim-left');
+                        }
+
+                    } else {
+                        localMemory = $('.owl-carousel').find('.active').index();
+
+                        if ($('.owl-carousel').find('.active-anim-right') || $('.owl-carousel').find('.active-anim-left')) {
+                            $('.owl-carousel').find('.active-anim-right').removeClass('active-anim-right');
+                            $('.owl-carousel').find('.active-anim-left').removeClass('active-anim-left');
+                            $('.owl-carousel').find('.active').find('.text').addClass('active-anim-right');
+                            $('.owl-carousel').find('.active').find('.img').addClass('active-anim-right');
+                        }
+
+                    }
+
+
                 });
             });
         }
     };
-    
 
+    $('.first-aboutCarousel').find('.active').find('.text').addClass('anim-txt');
 
     $(document).ready(function () {
         Owl.init();
@@ -339,8 +369,8 @@ $(buttons).click(function (e) {
     let attr = $(this).attr('data-attr');
 
     let box = $('.box-reviews').find('.box-carousel[data-attr=' + attr + ']');
-    $('.box-reviews').find('.box-carousel').fadeOut();
-    $(box).fadeIn();
+    $('.box-reviews').find('.box-carousel').fadeOut(600);
+    $(box).fadeIn(600);
     $(box).removeClass('d-none').addClass('active-carousel');
 });
 
@@ -369,7 +399,7 @@ $(function () {
     } else {
 
         $('.leadDiaryCarousel').owlCarousel({
-            items: 3,
+            items: 2,
             loop: false,
             center: true,
             margin: 20,

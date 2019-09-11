@@ -51,6 +51,18 @@ cursive;
 
                 &.active {
                     color: $primary_color;
+                    position: relative;
+
+                    &:before {
+                        content: '';
+                        position: absolute;
+                        width: 5000px;
+                        left: -5015px;
+                        height: 1px;
+                        background-color: $primary_color;
+                        top: 50%;
+                        transform: translate(0%, -50%);
+                    }
                 }
 
                 &:hover {
@@ -89,15 +101,11 @@ cursive;
         }
     }
 
-    .reviews-carousel {
-        overflow: hidden;
-    }
-    
-    .d-none{
+    .d-none {
         display: none;
     }
-    
-    
+
+
 
 
 
@@ -130,16 +138,16 @@ cursive;
                     color: $primary_color;
                     position: relative;
 
-                   /* &:before {
+                    &:before {
                         content: '';
                         position: absolute;
-                        width: 100%;
+                        width: 5000px;
+                        left: -5015px;
                         height: 1px;
                         background-color: $primary_color;
-                        left: -50px;
                         top: 50%;
-                        transform: translate(-50%, -50%);
-                    }*/
+                        transform: translate(0%, -50%);
+                    }
 
 
                 }
@@ -157,7 +165,7 @@ cursive;
             width: 100%;
 
             .img {
-                width: 871px;
+                width: 850px;
                 height: 709px;
 
                 img {

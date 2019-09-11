@@ -12,7 +12,7 @@ cursive;
     position: relative;
 
     .box-lead-diary.max-width {
-        padding: 0 50px;
+        padding: 0 0px 0 50px;
         margin-top: 0px;
         max-width: 1280px;
     }
@@ -20,7 +20,7 @@ cursive;
     .title-section.d-flex {
         align-items: center;
         position: absolute;
-        left: 50%;
+        left: 44%;
         transform: translate(-23%, 0%);
     }
 
@@ -89,10 +89,6 @@ cursive;
         }
     }
 
-    .lead-diary-carousel {
-        overflow: hidden;
-    }
-
 
     .bookmarks {
         margin-top: 150px;
@@ -125,12 +121,12 @@ cursive;
                     &:before {
                         content: '';
                         position: absolute;
-                        width: 100%;
+                        width: 5000px;
+                        left: -5015px;
                         height: 1px;
                         background-color: $primary_color;
-                        left: -50px;
                         top: 50%;
-                        transform: translate(-50%, -50%);
+                        transform: translate(0%, -50%);
                     }
 
 
@@ -140,6 +136,7 @@ cursive;
     }
 
     .leadDiaryCarousel {
+
         .posts {
 
             padding: 20px 0px;
@@ -172,15 +169,18 @@ cursive;
             }
 
             img {
-                filter:grayscale(100%) ;
+                filter: grayscale(0%);
                 transition: 0.2s;
             }
         }
+
+
 
         .owl-item {
             padding: 10px 0px;
             margin: 15px 0px;
             transition: 0.2s;
+
         }
 
         .owl-item.center {
@@ -194,10 +194,8 @@ cursive;
                 }
             }
 
-
-
             img {
-                filter:  grayscale(0%) ;
+                filter: grayscale(100%);
                 transition: 0.2s;
             }
 
@@ -332,6 +330,6 @@ cursive;
 
 @media (min-width: 1921px) {
     .lead-diary .title-section.d-flex {
-        transform: translate(-16%, 0%)
+        transform: translate(10%, 0%)
     }
 }
