@@ -1,0 +1,177 @@
+$primary_color: #E3AE67;
+
+$font_open_sans: 'Open Sans',
+sans-serif;
+
+$font_yeseva_one: 'Yeseva One',
+cursive;
+
+
+
+.about {
+    position: relative;
+    background-image: url(../images/map.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    
+
+    .box-about.max-width {
+       
+        padding: 0 50px;
+        padding-top: 150px;
+        max-width: 1280px;
+    }
+
+    .title-section.d-flex {
+        align-items: center;
+    }
+
+    .title-section {
+        position: absolute;
+
+        .back-num {
+            font-size: 250px;
+            color: #cdcdcd;
+            position: absolute;
+            right: 0%;
+            top: 50%;
+            -webkit-transform: translate(0%, -50%);
+            transform: translate(0%, -50%);
+            font-family: sans-serif;
+        }
+
+        .num {
+            width: 80px;
+            height: 30px;
+            line-height: 30px;
+            background-color: rgba(227, 174, 103, 0.7);
+            font-family: $font_yeseva_one;
+            color: #fff;
+            font-size: 20px;
+            position: relative;
+            padding: 5px;
+            margin-top: 25px;
+        }
+
+        h2 {
+            font-size: 45px;
+            font-weight: normal;
+            font-family: $font_yeseva_one;
+            margin-left: 25px;
+            margin-top: 15px;
+            text-transform: uppercase;
+        }
+    }
+
+    .about-carousel {
+        overflow: hidden;
+    }
+
+
+    .bookmarks {
+        margin-top: 150px;
+        margin-right: 51px;
+
+
+        ul {
+            display: block;
+            padding: 5px 0;
+            margin: auto;
+
+            .owl-dot {
+                display: none;
+            }
+
+            li {
+                display: block;
+                text-transform: uppercase;
+                cursor: pointer;
+                margin-bottom: 15px;
+                font-size: 15px;
+                font-family: $font_open_sans;
+                line-height: 160.86%;
+
+
+                &.active {
+                    color: $primary_color;
+                    position: relative;
+
+                    &:before {
+                        content: '';
+                        position: absolute;
+                        width: 100%;
+                        height: 1px;
+                        background-color: $primary_color;
+                        left: -50px;
+                        top: 50%;
+                        transform: translate(-50%, -50%);
+                    }
+
+
+                }
+            }
+        }
+    }
+
+    .owlExample {
+        .item {
+
+            margin-left: auto;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+
+            .img {
+                width: 735px;
+                height: 640px;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            .text {
+                width: 304px;
+                margin-top: 140px;
+
+                font-size: 15px;
+            }
+
+
+            p {
+                margin-bottom: 10px;
+                font-family: $font_open_sans;
+                color: #000;
+                line-height: 120%;
+            }
+        }
+
+        .owl-controls {
+            position: absolute;
+            top: 60px;
+            width: 100%;
+
+            @media (max-width: 767px) {
+                top: -90px;
+            }
+
+
+        }
+
+        .owl-nav {
+            display: none !important;
+        }
+    }
+    
+   
+}
+
+ @media(min-width: 1920px) {
+        .about .box-about.max-width {
+            margin-left: 150px;
+        }
+    }

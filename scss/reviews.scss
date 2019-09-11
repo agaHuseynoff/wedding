@@ -1,0 +1,222 @@
+$primary_color: #E3AE67;
+
+$font_open_sans: 'Open Sans',
+sans-serif;
+
+$font_yeseva_one: 'Yeseva One',
+cursive;
+
+
+
+
+.reviews {
+    position: relative;
+
+    .box-reviews.max-width {
+        padding: 0 50px;
+        margin-top: 0px;
+        max-width: 1280px;
+    }
+
+    .title-section.d-flex {
+        align-items: center;
+    }
+
+    .box-reviews {
+        background-color: #F7F7F7;
+    }
+
+    .title-links.d-flex {
+        justify-content: space-between;
+        align-items: center;
+
+        .back-num {
+            font-size: 250px;
+            color: #cdcdcd;
+            font-family: sans-serif;
+        }
+
+        .reviews-links {
+
+            a {
+                display: block;
+                text-transform: uppercase;
+                cursor: pointer;
+                margin-bottom: 15px;
+                font-size: 15px;
+                font-family: $font_open_sans;
+                line-height: 160.86%;
+                color: #727272;
+                transition: 0.2s;
+
+                &.active {
+                    color: $primary_color;
+                }
+
+                &:hover {
+                    color: $primary_color;
+                    transition: 0.2s;
+                }
+            }
+
+        }
+    }
+
+    .title-section {
+
+
+
+        .num {
+            width: 80px;
+            height: 30px;
+            line-height: 30px;
+            background-color: rgba(227, 174, 103, 0.7);
+            font-family: $font_yeseva_one;
+            color: #fff;
+            font-size: 20px;
+            position: relative;
+            padding: 5px;
+            margin-top: 25px;
+        }
+
+        h2 {
+            font-size: 45px;
+            font-weight: normal;
+            font-family: $font_yeseva_one;
+            margin-left: 25px;
+            margin-top: 15px;
+            text-transform: uppercase;
+        }
+    }
+
+    .reviews-carousel {
+        overflow: hidden;
+    }
+
+
+    .bookmarks {
+        margin-top: 150px;
+        margin-right: 51px;
+
+
+        ul {
+            display: block;
+            padding: 5px 0;
+            margin: auto;
+
+            .owl-dot {
+                display: none;
+            }
+
+            li {
+                display: block;
+                text-transform: uppercase;
+                cursor: pointer;
+                margin-bottom: 15px;
+                font-size: 15px;
+                font-family: $font_open_sans;
+                line-height: 160.86%;
+
+
+                &.active {
+                    color: $primary_color;
+                    position: relative;
+
+                    &:before {
+                        content: '';
+                        position: absolute;
+                        width: 100%;
+                        height: 1px;
+                        background-color: $primary_color;
+                        left: -50px;
+                        top: 50%;
+                        transform: translate(-50%, -50%);
+                    }
+
+
+                }
+            }
+        }
+    }
+
+    .owlExample {
+        .item {
+
+            margin-left: -15px;
+            padding: 0px 20px;
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+
+            .img {
+                width: 871px;
+                height: 709px;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            .text {
+                width: 304px;
+                margin-top: 140px;
+                font-size: 15px;
+
+                .btn {
+                    text-transform: uppercase;
+                    text-align: center;
+                    margin-top: 25px;
+                    display: inline-block;
+                    color: #000;
+                    font-size: 13px;
+                    line-height: 120%;
+                    border: 1px solid $primary_color;
+                    font-family: $font_open_sans;
+                    ;
+                    padding: 15px 10px;
+                    transition: 0.2s;
+
+                    &:hover {
+                        background-color: $primary_color;
+                        color: #fff;
+                        transition: 0.2s;
+                    }
+                }
+            }
+
+
+            p {
+                margin-bottom: 10px;
+                font-family: $font_open_sans;
+                color: #000;
+                line-height: 120%;
+
+                &:first-child {
+                    color: $primary_color;
+                    text-transform: uppercase;
+                }
+            }
+        }
+
+        .owl-controls {
+            position: absolute;
+            top: 60px;
+            width: 100%;
+
+            @media (max-width: 767px) {
+                top: -90px;
+            }
+
+
+        }
+
+        .owl-nav {
+            display: none !important;
+        }
+    }
+
+
+
+}

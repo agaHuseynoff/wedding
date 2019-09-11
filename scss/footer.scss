@@ -1,0 +1,51 @@
+$primary_color: #E3AE67;
+
+$font_open_sans: 'Open Sans',
+sans-serif;
+
+$font_yeseva_one: 'Yeseva One',
+cursive;
+
+.footer {
+    
+    
+    footer {
+        width: 100%;
+        background-color: #222222;
+        padding: 44px 0px;
+        margin-top: 50px;
+        
+        .box-footer {
+            color: #fff;
+            font-family: $font_open_sans;
+            
+            .d-flex {
+                justify-content: space-between;
+                 font-size: 10px;
+                align-items: center;
+                
+                .by-studio {
+                    line-height: 160.86%;
+                    text-transform: uppercase;
+                    
+                }
+                
+                .date-development {
+                    p{
+                        font-size: 8px;
+                        font-family: $font_open_sans;
+                        text-transform: uppercase;
+                        line-height: 160.86%;
+                    }
+                }
+                
+                .footer-social {
+                    
+                    img{
+                        margin-right: 10px;
+                    }
+                }
+            }
+        }
+    }
+}
